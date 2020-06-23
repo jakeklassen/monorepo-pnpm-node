@@ -1,6 +1,6 @@
+import { dtos, axios as sizzleAxios } from '@sizzle/common';
+import axios from 'axios';
 import express from 'express';
-import axios, { AxiosAdapter, AxiosError } from 'axios';
-import { dtos } from '@sizzle/common';
 
 const app = express();
 
@@ -25,10 +25,9 @@ app.post('/users', async (req, res, next) => {
 
     res.json(createUserResponse.data);
   } catch (error) {
-    console.log(error);
+    if (sizzleAxios.isAxiosError(error)) {
+      next(error.response?.data);
 
-    if (error.isAxiosError === true) {
-      next((error as AxiosError).response?.data);
       return;
     }
 
@@ -38,9 +37,10 @@ app.post('/users', async (req, res, next) => {
 
 app.use(
   (
-    err: any,
+    err: Error,
     req: express.Request,
     res: express.Response,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     next: express.NextFunction,
   ) => {
     res.status(500).json({ error: err });

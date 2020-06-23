@@ -43,10 +43,13 @@ importers:
       typescript: ^3.8.3
   packages/common:
     dependencies:
-      '@typegoose/typegoose': 7.2.0
+      '@typegoose/typegoose': 7.2.0_e0886a846a2ba6fa6e3296ddd89446b7
+      axios: 0.19.2
+      mongoose: 5.9.20_mongoose@5.9.20
       reflect-metadata: 0.1.13
       typescript: 3.9.5
     devDependencies:
+      '@types/mongoose': 5.7.27
       '@types/node': 14.0.13
       '@typescript-eslint/eslint-plugin': 3.4.0_ef361e4ef8e254fed4de428e0eeb98eb
       '@typescript-eslint/parser': 3.4.0_eslint@7.3.0+typescript@3.9.5
@@ -65,13 +68,16 @@ importers:
       ts-node: 8.10.2_typescript@3.9.5
     specifiers:
       '@typegoose/typegoose': ^7.2.0
+      '@types/mongoose': ^5.7.27
       '@types/node': ^14.0.5
       '@typescript-eslint/eslint-plugin': ^3.4.0
       '@typescript-eslint/parser': ^3.4.0
+      axios: ^0.19.2
       eslint: ^7.3.0
       eslint-config-prettier: ^6.11.0
       eslint-plugin-prettier: ^3.1.3
       jest: ^26.0.1
+      mongoose: ^5.9.20
       prettier: ^2.0.5
       reflect-metadata: ^0.1.13
       rimraf: ^3.0.2
@@ -848,10 +854,12 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-XIB2XbzHTN6ieIjfIMV9hlVcfPU26s2vafYWQcZHWXHOxiaRZYEDKEwdl129Zyg50+foYV2jCgtrqSA6qNuNSA==
-  /@typegoose/typegoose/7.2.0:
+  /@typegoose/typegoose/7.2.0_e0886a846a2ba6fa6e3296ddd89446b7:
     dependencies:
+      '@types/mongoose': 5.7.27
       lodash: 4.17.15
       loglevel: 1.6.8
+      mongoose: 5.9.20_mongoose@5.9.20
       reflect-metadata: 0.1.13
       semver: 7.3.2
       tslib: 2.0.0
@@ -901,7 +909,6 @@ packages:
   /@types/bson/4.0.2:
     dependencies:
       '@types/node': 14.0.13
-    dev: true
     resolution:
       integrity: sha512-+uWmsejEHfmSjyyM/LkrP0orfE2m5Mx9Xel4tXNeqi1ldK5XMQcDsFkBmLDtuyKUbxj2jGDo0H240fbCRJZo7Q==
   /@types/color-name/1.1.1:
@@ -1010,14 +1017,12 @@ packages:
     dependencies:
       '@types/bson': 4.0.2
       '@types/node': 14.0.13
-    dev: true
     resolution:
       integrity: sha512-v4Ay/0av+oDUsj3P6TT6UIGDlLKnpnokO5e3TFR53FSOngc7QX+BBZ0KgnIk4Vtna6ODoL6Jcy/uQobvmCnn8g==
   /@types/mongoose/5.7.27:
     dependencies:
       '@types/mongodb': 3.5.23
       '@types/node': 14.0.13
-    dev: true
     resolution:
       integrity: sha512-6+QFJg4jUM91dJYsJk32FuREOJ7ghgzxj4c+BV3+aK7a9fFGbghQRteB14P94fGXhJN63b2mBqf7luBHvCRFtg==
   /@types/node/14.0.13:
