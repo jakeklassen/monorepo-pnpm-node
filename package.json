@@ -1,0 +1,15 @@
+{
+  "name": "monorepo-node-pnpm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:all": "pnpm --recursive run build",
+    "backend:start": "pnpm --recursive run start --if-present --filter @sizzle/api --filter @sizzle/jobs --filter @sizzle/feathers-api",
+    "build": "pnpm recursive run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jake Klassen",
+  "license": "ISC"
+}

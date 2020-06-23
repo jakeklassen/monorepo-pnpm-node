@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  mongo:
+    image: mongo:4.2.8
+    # command: --smallfiles
+    ports:
+      - "27017:27017"
+    volumes:
+      - sizzle-api-database-data:/data/db
+    # # if you want to debug to volume enable to bottom two settings
+    # # and run `docker-compose exec mongo sh`
+    # stdin_open: true
+    # tty: true
+
+volumes:
+  sizzle-api-database-data:

@@ -1,0 +1,41 @@
+{
+  "name": "@sizzle/common",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "module": "build/index.esm.js",
+  "jsnext:main": "build/index.esm.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "author": "Jake Klassen",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rimraf build",
+    "build": "rollup -c",
+    "start": "ts-node src"
+  },
+  "dependencies": {
+    "@typegoose/typegoose": "^7.2.0",
+    "reflect-metadata": "^0.1.13",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.5",
+    "@typescript-eslint/eslint-plugin": "^3.4.0",
+    "@typescript-eslint/parser": "^3.4.0",
+    "eslint": "^7.3.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.18.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-typescript2": "^0.27.1",
+    "ts-jest": "^26.1.1",
+    "ts-node": "^8.10.2"
+  }
+}
